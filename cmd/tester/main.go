@@ -9,7 +9,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/openfaas-incubator/connector-sdk/types"
+	"github.com/JamesReate/faas-azservicebus-connector/types"
 	"github.com/openfaas/faas-provider/auth"
 )
 
@@ -47,7 +47,8 @@ func main() {
 		log.Printf("Invoking on topic vm.powered.on - %s\n", gateway)
 		time.Sleep(2 * time.Second)
 		data := []byte("test " + time.Now().String())
-		controller.Invoke("vm.powered.on", &data)
+		// this what we should call when we receive msg from service bus
+		controller.Invoke("vm.powered.on", &data) // topic would be the sb queue name, and the data the string msg received
 	}
 }
 

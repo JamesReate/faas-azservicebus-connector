@@ -1,4 +1,4 @@
-module github.com/openfaas-incubator/connector-sdk
+module github.com/JamesReate/faas-azservicebus-connector
 
 go 1.13
 

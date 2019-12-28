@@ -3,5 +3,5 @@
 ```sh
 go build
 export PASSWORD="Your gateway password"
-./tester -username=admin -password=$PASSWORD
+./tester -username=admin -password=$PASSWORD -gateway=https://functions.materia.pe
 ```
